@@ -1,5 +1,5 @@
 import react from 'react';
-import CopyURL from '../utils/CopyUrl';
+import CopyURL from '../utils/CopyURL';
 import SimplePaper from '../utils/SimplePaper';
 import { useEffect, useState } from 'react';
 import axios from 'axios';

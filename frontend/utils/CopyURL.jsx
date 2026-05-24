@@ -4,7 +4,7 @@ import './CopyURL.css';
 
 export default function CopyURL(){
 
-    function copyURL(){
+    function CopyURL(){
 
         navigator.clipboard.writeText(window.location.href);
     }
@@ -13,7 +13,7 @@ export default function CopyURL(){
         <div className="copy-box">
             <input type="text" value={window.location.href}  readOnly/>
 
-            <button onClick={copyURL}>Copy</button>
+            <button onClick={CopyURL}>Copy</button>
         </div>
     )
 
