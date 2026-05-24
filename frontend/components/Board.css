@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Space+Mono:wght@400;700&display=swap');
+
+/* ── Base ── */
+.board-wrapper {
+    padding: 1.5rem;
+    min-height: 100vh;
+    background: #0f0f11;
+    color: #e8e6f0;
+    font-family: 'DM Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+/* ── Top bar ── */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.board-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    color: #e8e6f0;
+    letter-spacing: -0.3px;
+}
+
+.board-slug {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: 'Space Mono', monospace;
+}
+
+/* ── Add card form ── */
+.add-card-form {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: #1a1a20;
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.add-card-form input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #e8e6f0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    padding: 4px 0;
+}
+
+.add-card-form input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.add-card-form input[name="title"] {
+    flex: 1;
+    min-width: 120px;
+    font-weight: 500;
+}
+
+.add-card-form input[name="body"] {
+    flex: 2;
+    min-width: 160px;
+    color: rgba(255, 255, 255, 0.6);
+    border-left: 0.5px solid rgba(255, 255, 255, 0.08);
+    padding-left: 12px;
+}
+
+.add-card-form select {
+    background: #222228;
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    padding: 5px 8px;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+}
+
+.submit-btn {
+    background: #7c6af7;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+}
+
+.submit-btn:hover {
+    background: #6a58e0;
+}
+
+/* ── Columns ── */
+.columns-wrapper {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.column {
+    flex: 1;
+    min-width: 0;
+    border-radius: 12px;
+    padding: 12px;
+    min-height: 70vh;
+    list-style: none;
+    margin: 0;
+}
+
+.col-todo {
+    background: #1a1a20;
+    border: 0.5px solid rgba(255, 255, 255, 0.07);
+}
+
+.col-inprogress {
+    background: #191820;
+    border: 0.5px solid rgba(124, 106, 247, 0.2);
+}
+
+.col-done {
+    background: #141a18;
+    border: 0.5px solid rgba(29, 158, 117, 0.2);
+}
+
+/* ── Column header ── */
+.col-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
+}
+
+.col-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-todo       { background: #888780; }
+.dot-inprogress { background: #7c6af7; }
+.dot-done       { background: #1D9E75; }
+
+.col-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.label-todo       { color: #888780; }
+.label-inprogress { color: #a89af9; }
+.label-done       { color: #1D9E75; }
+
+.col-count {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 20px;
+}
+
+.count-todo       { background: rgba(136, 135, 128, 0.15); color: #888780; }
+.count-inprogress { background: rgba(124, 106, 247, 0.15); color: #a89af9; }
+.count-done       { background: rgba(29, 158, 117, 0.12);  color: #1D9E75; }
