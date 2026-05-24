@@ -29,7 +29,7 @@ export default function HomePage() {
         <div id="parent">
 
             <div className="outer">
-                <img src="public\image.png" alt="collab" />
+                <img src="/image.png" alt="collab" />
               
             </div>
            
