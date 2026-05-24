@@ -17,7 +17,7 @@ export default function Board() {
     });
 
     let params = useParams();
-    const API = 'http://localhost:8080/card';
+    const API = 'https://boardflow-xlhx.onrender.com/card';
     let id = params.id;
 
     function handlechange(e) {
@@ -33,7 +33,7 @@ export default function Board() {
     }
 
     const getCards = async () => {
-        const cardRes = await axios.get(`http://localhost:8080/card/${id}`);
+        const cardRes = await axios.get(`https://boardflow-xlhx.onrender.com/card/${id}`);
         let crds = cardRes.data.cards;
         setCards([...crds]);
     }
@@ -51,7 +51,7 @@ export default function Board() {
 
     async function handleDelete(cardId) {
         try {
-            await axios.delete(`http://localhost:8080/card/${cardId}`);
+            await axios.delete(`https://boardflow-xlhx.onrender.com/card/${cardId}`);
             socket.emit("card-deleted",id);
             getCards();
         } catch (e) {
@@ -64,7 +64,7 @@ export default function Board() {
         if (result.destination.droppableId === result.source.droppableId) return;
 
         const cardId = result.draggableId;
-        await axios.patch(`http://localhost:8080/card/${cardId}`, {
+        await axios.patch(`https://boardflow-xlhx.onrender.com/card/${cardId}`, {
             status: result.destination.droppableId
         });
           socket.emit("card-moved",id);

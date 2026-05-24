@@ -10,7 +10,7 @@ import { useParams } from 'react-router-dom';
 
 export default function Boards() {
     let navigate = useNavigate();
-    const API = 'http://localhost:8080/boards';
+    const API = 'https://boardflow-xlhx.onrender.com/boards';
     const [boards, setBoards] = useState([]);
     const [title, setTitle] = useState("");
 
